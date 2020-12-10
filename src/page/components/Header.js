@@ -8,6 +8,9 @@ const Header = () => {
       <Link to="/" className="item">
         홈
       </Link>
+      <Link to="/map" className="item">
+        내 위치 검색
+      </Link>
       <Link to="/write" className="item">
         글쓰기
       </Link>

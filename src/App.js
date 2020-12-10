@@ -8,6 +8,7 @@ import Bar from './page/components/Bar';
 import Header from './page/components/Header';
 import CommonHeader from './page/components/common/Header';
 import WritePage from './page/components/WritePage';
+import KakaoMap from './page/components/KakaoMap';
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
       <Route exact path="/3" component={Beauty} />
       <Route exact path="/4" component={Bar} />
       <Route exact path="/write" component={WritePage} />
+      <Route exact path="/map" component={KakaoMap} />
     </Router>
   );
 };
