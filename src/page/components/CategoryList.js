@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import CategoryItem from './CategoryItem';
 import axios from 'axios';
+import './Header.css';
 
 const CategoryListBlock = styled.div`
   box-sizing: border-box;
@@ -15,13 +16,6 @@ const CategoryListBlock = styled.div`
     padding-right: 1rem;
   }
 `;
-
-// eslint-disable-next-line no-unused-vars
-const sampleMain = {
-  posterTitle: '제목',
-  posterContent: '내용',
-  posterRegister: '2',
-};
 
 const CategoryList = () => {
   const [category, setCategory] = useState(null);

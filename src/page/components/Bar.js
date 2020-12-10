@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import Axios from '../../../node_modules/axios/index';
+//import Axios from '../../../node_modules/axios/index';
+import axios from 'axios';
 import styled from 'styled-components';
 import PosterItem from './PosterItem';
 
@@ -24,7 +25,7 @@ const Bar = () => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const response = await Axios.get('/api/poster/bar');
+        const response = await axios.get('/api/poster/bar');
         setBar(response.data.bar);
       } catch (e) {
         console.log(e);
