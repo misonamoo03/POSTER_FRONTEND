@@ -32,8 +32,8 @@ const PosterItemBlock = styled.div`
   }
 `;
 
-const PosterItem = ({ health }) => {
-  const { posterNo, posterTitle, posterContent } = health;
+const PosterItem = ({ poster }) => {
+  const { posterNo, posterTitle, posterContent } = poster;
   return (
     <PosterItemBlock>
       <div className="contents">

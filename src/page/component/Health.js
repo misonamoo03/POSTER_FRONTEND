@@ -47,7 +47,7 @@ const Health = () => {
   return (
     <PosterListBlock>
       {health.map((health) => (
-        <PosterItem key={health.posterNo} health={health} />
+        <PosterItem key={health.posterNo} poster={health} />
       ))}
     </PosterListBlock>
   );

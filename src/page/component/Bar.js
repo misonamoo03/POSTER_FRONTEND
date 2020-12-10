@@ -16,16 +16,16 @@ const PosterListBlock = styled.div`
   }
 `;
 
-const Beauty = () => {
-  const [beauty, setBeauty] = useState(null);
+const Bar = () => {
+  const [bar, setBar] = useState(null);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const response = await Axios.get('/api/poster/beauty');
-        setBeauty(response.data.beauty);
+        const response = await Axios.get('/api/poster/bar');
+        setBar(response.data.bar);
       } catch (e) {
         console.log(e);
       }
@@ -40,17 +40,17 @@ const Beauty = () => {
   }
 
   // 아직 item 값이 설정되지 않았을 때
-  if (!beauty) {
+  if (!bar) {
     return null;
   }
 
   return (
     <PosterListBlock>
-      {beauty.map((beauty) => (
-        <PosterItem key={beauty.posterNo} poster={beauty} />
+      {bar.map((bar) => (
+        <PosterItem key={bar.posterNo} poster={bar} />
       ))}
     </PosterListBlock>
   );
 };
 
-export default Beauty;
+export default Bar;
