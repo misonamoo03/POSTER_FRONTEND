@@ -34,7 +34,7 @@ const CategoryItemBlock = styled.div`
   }
 `;
 const CategoryItem = ({ category }) => {
-  const { ctgryNo, ctgryNm } = category;
+  const { ctgryNo, ctgryEngNm, ctgryKorNm } = category;
   return (
     <CategoryItemBlock>
       <div className="thumbnail">
@@ -43,7 +43,7 @@ const CategoryItem = ({ category }) => {
       <div className="contents">
         <h2>{ctgryNo}</h2>
         <br />
-        <Link to={'/' + ctgryNo}>{ctgryNm}</Link>
+        <Link to={'/' + ctgryEngNm}>{ctgryKorNm}</Link>
       </div>
     </CategoryItemBlock>
   );

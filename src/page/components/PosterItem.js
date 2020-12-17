@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import logo from '../../logo.svg';
+import { Link } from 'react-router-dom';
 
 const PosterItemBlock = styled.div`
   display: flex;
@@ -33,11 +34,14 @@ const PosterItemBlock = styled.div`
 `;
 
 const PosterItem = ({ poster }) => {
-  const { posterNo, posterTitle, posterContent } = poster;
+  const { posterNo, posterTitle, posterContent, posterTypeNm } = poster;
   return (
     <PosterItemBlock>
       <div className="contents">
-        <h2>{posterNo}</h2>
+        <Link to={'/detail/' + posterTypeNm + '/' + posterNo}>
+          <h2>{posterNo}</h2>
+        </Link>
+        {/* eslint-disable-next-line jsx-a11y/alt-text */}
         <img src={logo} />
         <br />
         <h3>{posterTitle}</h3>

@@ -9,6 +9,7 @@ import Header from './page/components/Header';
 import CommonHeader from './page/components/common/Header';
 import WritePage from './page/components/WritePage';
 import KakaoMap from './page/components/KakaoMap';
+import Detail from './page/components/Detail';
 
 const App = () => {
   return (
@@ -16,12 +17,13 @@ const App = () => {
       <CommonHeader />
       <Header />
       <Route exact path="/" component={CategoryList} />
-      <Route exact path="/1" component={Health} />
-      <Route exact path="/2" component={Food} />
-      <Route exact path="/3" component={Beauty} />
-      <Route exact path="/4" component={Bar} />
+      <Route exact path="/health" component={Health} />
+      <Route exact path="/food" component={Food} />
+      <Route exact path="/beauty" component={Beauty} />
+      <Route exact path="/bar" component={Bar} />
       <Route exact path="/write" component={WritePage} />
       <Route exact path="/map" component={KakaoMap} />
+      <Route exact path="/detail/:type/:id" component={Detail} />
     </Router>
   );
 };

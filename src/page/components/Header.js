@@ -1,19 +1,19 @@
 import React from 'react';
 import './Header.css';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
   return (
     <div className="header">
-      <Link to="/" className="item">
+      <NavLink exact to="/" className="item" activeClassName="active">
         홈
-      </Link>
-      <Link to="/map" className="item">
+      </NavLink>
+      <NavLink to="/map" className="item" activeClassName="active">
         내 위치 검색
-      </Link>
-      <Link to="/write" className="item">
+      </NavLink>
+      <NavLink to="/write" className="item" activeClassName="active">
         글쓰기
-      </Link>
+      </NavLink>
     </div>
   );
 };
